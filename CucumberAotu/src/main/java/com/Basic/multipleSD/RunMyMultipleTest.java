@@ -10,7 +10,13 @@ import cucumber.api.junit.Cucumber;
 		monochrome = true,
 		//dryRun = true,
 		features = "classpath:",
-		glue = "com.Basic.multipleSD"
+		glue = "com.Basic.multipleSD",
+				plugin = { "pretty",
+						"html:target/cucumber8-htmlreport",
+						"json:target/cucumber-report8.json",
+						"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport8.html" 
+						
+		}
 		
 		)
 public class RunMyMultipleTest {

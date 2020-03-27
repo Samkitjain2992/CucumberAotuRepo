@@ -12,8 +12,11 @@ import cucumber.api.junit.Cucumber;
 		features = "classpath:MultipleScenarioFF.feature",
 		glue = "com.Basic.multiplescnarioSD",
 				plugin = { "pretty",
-						"html:target/cucumber-htmlreport",
-						"json:target/cucumber-report1.json"}
+						"html:target/cucumber1-htmlreport",
+						"json:target/cucumber-report1.json",
+						"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport1.html" 
+						
+		}
 						
 		)
 				

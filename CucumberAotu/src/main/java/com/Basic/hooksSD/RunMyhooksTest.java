@@ -11,9 +11,11 @@ import cucumber.api.junit.Cucumber;
 		//dryRun = true,
 		features = "classpath:HooksFF.feature",
 		glue = "com.Basic.hooksSD",
-		plugin = { "pretty",
-				"html:target/cucumber-htmlreport",
-				"json:target/cucumber-report5.json"
+				plugin = { "pretty",
+						"html:target/cucumber7-htmlreport",
+						"json:target/cucumber-report7.json",
+						"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport7.html" 
+						
 		}
 		)
 public class RunMyhooksTest {

@@ -10,7 +10,13 @@ import cucumber.api.junit.Cucumber;
 		monochrome = true,
 		dryRun = true,
 		features = "classpath:DataDrivenFF.feature",
-		glue = "com.Basic.datadrivenSD"
+		glue = "com.Basic.datadrivenSD",
+				plugin = { "pretty",
+						"html:target/cucumber6-htmlreport",
+						"json:target/cucumber-report6.json",
+						"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport7.html" 
+						
+		}
 		
 		)
 public class RunMyDataDrivenTest {

@@ -77,10 +77,11 @@ public void  User_checks_Email_address_field(String userEmailAddress ) throws In
  }
  @When ("^user enters Title and user \"([^\"]*)\" first name$")
  public void user_enters_title_and_user_first_name(String userName) throws InterruptedException {
-	//WebElement TitleClick= mydriver.findElement(By.xpath("//t[text()='Mr']"));
-	//Thread.sleep(2000);
-	//TitleClick.click();
-	 mydriver.findElement(By.xpath("//i[@id=\"customer_firstname\"]")).sendKeys(userName);
+	 Thread.sleep(2000);
+	 mydriver.findElement(By.id("customer_firstname")).sendKeys("Samkit");
+	WebElement TitleClick= mydriver.findElement(By.xpath("//*[@id=\"id_gender1\"]"));
+	Thread.sleep(2000);
+	TitleClick.click();
  }
  @And("^User enters user \"([^\"]*)\" surname$")
  public void User_enters_user_surname(String userSurName) {

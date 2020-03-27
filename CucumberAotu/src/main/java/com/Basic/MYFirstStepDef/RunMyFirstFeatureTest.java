@@ -11,6 +11,9 @@ import cucumber.api.junit.Cucumber;
                  glue = "com.Basic.MYFirstStepDef",
                  
                  plugin= {"pretty",
+                		 
+         					"html:target/cucumber-htmlreport",
+         					"json:target/cucumber-report.json",
                 		"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport.html" 
                 		 
                  }
@@ -20,6 +23,7 @@ import cucumber.api.junit.Cucumber;
 		)
 
 public class RunMyFirstFeatureTest {
+	
 
 
 

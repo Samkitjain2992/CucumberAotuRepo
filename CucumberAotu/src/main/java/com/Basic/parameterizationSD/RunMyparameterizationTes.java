@@ -12,10 +12,10 @@ import cucumber.api.junit.Cucumber;
 		features = "classpath:ParameterizationFF.feature",
 		glue = "com.Basic.parameterizationSD",
 				plugin = { "pretty",
-						"html:target/cucumber-htmlreport",
-						"json:target/cucumber-report3.json",
+						"html:target/cucumber2-htmlreport",
+						"json:target/cucumber-report2.json",
 		   
-				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport1.html"
+				"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport2.html"
 						}
 		)
 public class RunMyparameterizationTes {

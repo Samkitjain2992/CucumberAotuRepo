@@ -1,4 +1,4 @@
-Feature: Create account in Your logo Site
+Feature: Create account in Your logo Site7
 As a user u need to open Your logo page and do the validations
 
 Scenario: Validate signin Email address field

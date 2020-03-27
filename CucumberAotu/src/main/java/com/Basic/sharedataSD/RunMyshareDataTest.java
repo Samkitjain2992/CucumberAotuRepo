@@ -11,9 +11,11 @@ import cucumber.api.junit.Cucumber;
 		//dryRun = true,
 		features = "classpath:ShareFF.feature",
 		glue = "com.Basic.sharedataSD",
-		plugin = { "pretty",
-				"html:target/cucumber-htmlreport",
-				"json:target/cucumber-report5.json"
+				plugin = { "pretty",
+						"html:target/cucumber9-htmlreport",
+						"json:target/cucumber-report9.json",
+						"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport9.html" 
+						
 		}
 		)
 public class RunMyshareDataTest {
