@@ -9,8 +9,8 @@ import cucumber.api.junit.Cucumber;
 		
 		monochrome = true,
 		//dryRun = true,
-		features = "classpath:",
-		glue = "com.Basic.multipleSD",
+		features ={ "classpath:MyFirstFeatureFile.feature","classpath:MultipleScenarioFF.feature"},
+	     glue = "com.Basic.multipleSD",
 				plugin = { "pretty",
 						"html:target/cucumber8-htmlreport",
 						"json:target/cucumber-report8.json",

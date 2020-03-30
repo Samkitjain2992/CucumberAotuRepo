@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		
 		monochrome = true,
-		dryRun = true,
+		//dryRun = true,
 		features = "classpath:DataDrivenFF.feature",
 		glue = "com.Basic.datadrivenSD",
 				plugin = { "pretty",

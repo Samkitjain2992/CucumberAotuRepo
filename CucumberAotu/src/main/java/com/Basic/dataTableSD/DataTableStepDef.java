@@ -1,5 +1,6 @@
 package com.Basic.dataTableSD;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
@@ -30,9 +31,11 @@ WebDriver mydriver;
  
  public void user_click_sing_button () {
      
-	 mydriver.findElement(By.xpath("/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a")).click();
+	 mydriver.findElement(By.xpath("//a[@class='login']")).click();
 	
-}
+	}
+	
+
 	 @When("^Enter \"([^\"]*)\" email address$")
 		public void Enter_email_address(String userEmailAddress) throws InterruptedException {
 	 Thread.sleep(10000);

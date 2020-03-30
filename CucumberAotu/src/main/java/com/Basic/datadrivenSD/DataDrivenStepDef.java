@@ -68,19 +68,20 @@ public void  User_checks_Email_address_field(String userEmailAddress ) throws In
 	 Assert.assertEquals(pageTitle, "CREATE AN ACCOUNT");
 	 
  }
- @When ("^user enters Title and user \"([^\"]*)\" first name$")
+ @When("^user enters Title and user as \"([^\"]*)\" first name$")
  public void user_enters_title_and_user_first_name(String username) throws InterruptedException {
-	//WebElement TitleClick= mydriver.findElement(By.xpath("//t[text()='Mr']"));
+	 Thread.sleep(2000);
+	 mydriver.findElement(By.id("customer_firstname")).sendKeys(username);
+	WebElement TitleClick= mydriver.findElement(By.xpath("//*[@id=\"id_gender1\"]"));
 	Thread.sleep(2000);
-	//TitleClick.click();
-     mydriver.findElement(By.id("customer_firstname")).sendKeys(username);
+	TitleClick.click();
  }
- @And("^User enters user \"([^\"]*)\" surname$")
+ @When("^User enters user as \"([^\"]*)\" surname$")
  public void User_enters_user_surname(String userSurName) {
 	mydriver.findElement(By.id("customer_lastname")).sendKeys(userSurName);
  }
  
- @Then("^user checks user \"([^\"]*)\" first name and \"([^\"]*)\" surname is present$")
+ @Then("^user checks user as \"([^\"]*)\" first name and as \"([^\"]*)\" surname is present$")
  public void user_checks_user_first_name_and_last_name_is_presentl(String userName,String userSurName) throws Throwable {
 	  List<String> checksDetail = new LinkedList<String>();
 	   checksDetail.add(mydriver.findElement(By.xpath("//*[@id=\"customer_firstname\"]")).getAttribute("value"));

@@ -11,26 +11,29 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import cucumber.api.java.cs.A;
+//import cucumber.api.java.cs.A;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class HooksStepDef {
-WebDriver mydriver;
+WebDriver mydriver ;
 	
     @Before
     public void beforeSetup() {
     	System.setProperty("webdriver.chrome.driver", "C:\\Users\\chromedriver.exe");
-	    mydriver = new ChromeDriver();
+    	String abc= System.getenv("webdriver.chrome.driver");
+    	System.out.println(abc);
+	    mydriver  = new ChromeDriver();
     }
 
 	@Given("^User need to be on your logo page$")
 	public void User_need_to_be_on_Yourlogo_page() throws Throwable{
 		
 	    mydriver.get("http://automationpractice.com/index.php");
-	    String getTitle = mydriver.getTitle();
+	    String getTitle = mydriver.getCurrentUrl();
+	    Assert.assertTrue("validation of url is not done","http://automationpractice.com/index.php".equals(getTitle) );
 	    System.out.println(getTitle);
 	   
 	    
@@ -46,8 +49,11 @@ WebDriver mydriver;
 	 @And("^Enter \"([^\"]*)\" email address$")
 		public void Enter_email_address(String userEmailAddress) throws InterruptedException {
 		 Thread.sleep(10000);
-			mydriver.findElement(By.id("email_create")).sendKeys(userEmailAddress);
-			
+			WebElement txtBox=mydriver.findElement(By.id("email_create"));
+			txtBox.sendKeys(userEmailAddress);
+		//	List<WebElement>ll=mydriver.findElements(By.id("abc"));
+		//	ll.get(0).getText();
+		
 		}
 	 
  @Then("^check \"([^\"]*)\" Email address field$")
