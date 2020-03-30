@@ -14,5 +14,5 @@ Feature: Create account in Your logo Site6
 
     Examples: 
       | username | usersurname |
-      | samkit   | jain        |
-      | Prateek  | Srivastab   |
+      | Samkit   | jain        |
+     
