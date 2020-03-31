@@ -46,10 +46,10 @@ WebDriver mydriver;
  @Then("^check Email address field$")
 public void  User_checks_Email_address_field() throws InterruptedException {
 	WebElement verifySingingPage = mydriver.findElement(By.id("email_create"));
-    String userNameActual    = verifySingingPage.getAttribute("value");
-    
-	System.out.println(userNameActual);
+    String userNameActual    = verifySingingPage.getText();
+    System.out.println(userNameActual);
     Assert.assertEquals("samkitjain@cdnsol.com", userNameActual );
+  
    
     Thread.sleep(3000);
   }
