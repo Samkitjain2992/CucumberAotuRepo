@@ -70,8 +70,8 @@ public void  User_checks_Email_address_field() throws InterruptedException {
  }
  @When ("^user enters Title and user first name$")
  public void user_enters_title_and_user_first_name() throws InterruptedException {
-	 Thread.sleep(2000);
-	 mydriver.findElement(By.id("customer_firstname")).sendKeys("Samkit");
+	 Thread.sleep(4000);
+	 mydriver.findElement(By.xpath("//input[@id='customer_firstname']")).sendKeys("Samkit");
 	WebElement TitleClick= mydriver.findElement(By.xpath("//*[@id=\"id_gender1\"]"));
 	Thread.sleep(2000);
 	TitleClick.click();

@@ -51,8 +51,8 @@ public void user_click_on_create_account_button () throws InterruptedException {
 }
 @When ("^user enters Title and user \"([^\"]*)\" first name$")
 public void user_enters_title_and_user_first_name(String userName) throws InterruptedException {
-	Thread.sleep(2000);
-	 mydriver.findElement(By.id("customer_firstname")).sendKeys("Samkit");
+	Thread.sleep(4000);
+	 mydriver.findElement(By.xpath("//input[@id='customer_firstname']")).sendKeys(userName);
 	WebElement TitleClick= mydriver.findElement(By.xpath("//*[@id=\"id_gender1\"]"));
 	Thread.sleep(2000);
 	TitleClick.click();
