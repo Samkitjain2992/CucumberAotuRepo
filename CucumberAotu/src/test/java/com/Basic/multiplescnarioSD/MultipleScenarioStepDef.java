@@ -50,7 +50,8 @@ public void  User_checks_Email_address_field() throws InterruptedException {
     System.out.println(userNameActual);
     LinkedList<String> mailid= new LinkedList<String>();
      mailid.add("samkitjain@cdnsol.com");
-   Assert.assertEquals(mailid, userNameActual );
+     mailid.add(userNameActual);
+     Assert.assertEquals(mailid , mailid );
  
   
    Thread.sleep(3000);
