@@ -74,7 +74,7 @@ public void  User_checks_Email_address_field(String userEmailAddress ) throws In
  }
  @When("^user enters Title and user as \"([^\"]*)\" first name$")
  public void user_enters_title_and_user_first_name(String username) throws InterruptedException {
-	 Thread.sleep(4000);
+	 Thread.sleep(8000);
 	 mydriver.findElement(By.xpath("//input[@id='customer_firstname']")).sendKeys(username);
 	WebElement TitleClick= mydriver.findElement(By.xpath("//*[@id=\"id_gender1\"]"));
 	Thread.sleep(2000);

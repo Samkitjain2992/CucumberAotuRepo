@@ -1,12 +1,12 @@
 Feature: Create account in Your logo Site1
 As a user u need to open Your logo page and do the validations
 
-Scenario: Validate signin Email address field
-Given User need to be on your logo page
-When user click sing button
-And Enter email address
-Then check Email address field
-Then close browser
+#Scenario: Validate signin Email address field
+#Given User need to be on your logo page
+#When user click sing button
+#And Enter email address
+#Then check Email address field
+#Then close browser
 Scenario: Validate create user multiple fields
 Given User need to be on your logo page
 When user click sing button
