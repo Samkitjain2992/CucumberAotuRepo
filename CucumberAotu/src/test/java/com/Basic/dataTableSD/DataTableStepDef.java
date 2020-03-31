@@ -49,7 +49,7 @@ WebDriver mydriver;
     String userNameActual    = verifySingingPage.getAttribute("value");
    
 	System.out.println(userNameActual);
-    Assert.assertEquals(userNameActual,userEmailAddress );
+	 Assert.assertEquals(userEmailAddress , userNameActual );
     Thread.sleep(1000);
   }
  

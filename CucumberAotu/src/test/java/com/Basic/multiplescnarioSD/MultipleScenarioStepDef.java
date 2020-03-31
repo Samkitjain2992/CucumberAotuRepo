@@ -49,7 +49,7 @@ public void  User_checks_Email_address_field() throws InterruptedException {
     String userNameActual    = verifySingingPage.getAttribute("value");
     
 	System.out.println(userNameActual);
-    Assert.assertEquals(userNameActual,"samkitjain@cdnsol.com" );
+    Assert.assertEquals("samkitjain@cdnsol.com",userNameActual );
     Thread.sleep(10000);
   }
  

@@ -49,7 +49,7 @@ public void  User_checks_Email_address_field(String userEmailAddress ) throws In
     String userNameActual    = verifySingingPage.getAttribute("value");
     
 	System.out.println(userNameActual);
-    Assert.assertEquals(userNameActual,userEmailAddress );
+	 Assert.assertEquals(userEmailAddress, userNameActual );
     Thread.sleep(10000);
   }
  

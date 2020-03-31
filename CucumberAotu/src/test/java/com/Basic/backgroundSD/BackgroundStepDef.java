@@ -38,7 +38,7 @@ WebDriver mydriver;
 }
 	 @And("^Enter email address$")
 		public void Enter_email_address() throws InterruptedException {
-		 Thread.sleep(10000);
+		 Thread.sleep(3000);
 			mydriver.findElement(By.id("email_create")).sendKeys("samkitjain@cdnsol.com");
 			
 		}
@@ -49,8 +49,9 @@ public void  User_checks_Email_address_field() throws InterruptedException {
     String userNameActual    = verifySingingPage.getAttribute("value");
     
 	System.out.println(userNameActual);
-    Assert.assertEquals(userNameActual,"samkitjain@cdnsol.com" );
-    Thread.sleep(10000);
+    Assert.assertEquals("samkitjain@cdnsol.com", userNameActual );
+   
+    Thread.sleep(3000);
   }
  
    @And("^user need to be on your logo SignIn page$")
