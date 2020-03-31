@@ -60,10 +60,13 @@ WebDriver mydriver ;
 public void  User_checks_Email_address_field(String userEmailAddress ) throws InterruptedException {
 	WebElement verifySingingPage = mydriver.findElement(By.id("email_create"));
     String userNameActual    = verifySingingPage.getAttribute("value");
-    
-	System.out.println(userNameActual);
-	Assert.assertEquals(userEmailAddress , userNameActual );
-    Thread.sleep(10000);
+    System.out.println(userNameActual);
+    LinkedList<String> mailid= new LinkedList<String>();
+     mailid.add("samkitjain@cdnsol.com");
+   Assert.assertEquals(mailid, userNameActual );
+ 
+  
+   Thread.sleep(3000);
   }
  
    @And("^user need to be on your logo SignIn page$")

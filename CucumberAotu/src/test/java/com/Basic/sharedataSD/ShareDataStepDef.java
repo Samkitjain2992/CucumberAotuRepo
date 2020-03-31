@@ -58,9 +58,9 @@ WebDriver mydriver;
 	  LinkedList<String> name = new LinkedList<String> ();
 	  name.add(userName);
 	  name.add(userSurName);
-	  Thread.sleep(2000);
-	  Assert.assertEquals(checksDetail, name);
-	// throw new PendingException();
+	  Thread.sleep(3000);
+	  Assert.assertEquals(name,checksDetail);
+	
  }
 
   

@@ -1,5 +1,7 @@
 package com.Basic.MYFirstStepDef;
 
+import java.util.LinkedList;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -42,13 +44,16 @@ public void user_click_sing_button () {
 	}
  
 @Then("^check Email address field$")
-public void  User_checks_Email_address_field() {
+public void  User_checks_Email_address_field() throws InterruptedException {
 WebElement verifySingingPage = mydriver.findElement(By.id("email_create"));
     String userNameActual    = verifySingingPage.getAttribute("value");
-
-System.out.println(userNameActual);
-Assert.assertEquals(userNameActual,"samkitjain@cdnsol.com" );
-//  throw new PendingException();
+    System.out.println(userNameActual);
+    LinkedList<String> mailid= new LinkedList<String>();
+     mailid.add("samkitjain@cdnsol.com");
+   Assert.assertEquals(mailid, userNameActual );
+ 
+  
+   Thread.sleep(3000);
 
 
 }

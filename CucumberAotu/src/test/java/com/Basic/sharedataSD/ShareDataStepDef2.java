@@ -1,5 +1,7 @@
 package com.Basic.sharedataSD;
 
+import java.util.LinkedList;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,10 +30,13 @@ WebDriver mydriver;
 public void  User_checks_Email_address_field(String userEmailAddress ) throws InterruptedException {
 	WebElement verifySingingPage = mydriver.findElement(By.id("email_create"));
    String userNameActual    = verifySingingPage.getAttribute("value");
-   
-	System.out.println(userNameActual);
-   Assert.assertEquals(userEmailAddress,userNameActual );
-   Thread.sleep(10000);
+   System.out.println(userNameActual);
+   LinkedList<String> mailid= new LinkedList<String>();
+    mailid.add("samkitjain@cdnsol.com");
+  Assert.assertEquals(mailid, userNameActual );
+
+ 
+  Thread.sleep(3000);
  }
 
   @And("^user need to be on your logo SignIn page$")
@@ -54,7 +59,7 @@ public void user_enters_title_and_user_first_name(String userName) throws Interr
 	Thread.sleep(4000);
 	 mydriver.findElement(By.xpath("//input[@id='customer_firstname']")).sendKeys(userName);
 	WebElement TitleClick= mydriver.findElement(By.xpath("//*[@id=\"id_gender1\"]"));
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	TitleClick.click();
 }
 @After

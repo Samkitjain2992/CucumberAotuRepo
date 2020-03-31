@@ -1,6 +1,7 @@
 package com.Basic.dataTableSD;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Assert;
@@ -47,10 +48,13 @@ WebDriver mydriver;
       public void  User_checks_Email_address_field(String userEmailAddress ) throws InterruptedException {
 	 WebElement verifySingingPage = mydriver.findElement(By.id("email_create"));
     String userNameActual    = verifySingingPage.getAttribute("value");
-   
-	System.out.println(userNameActual);
-	 Assert.assertEquals(userEmailAddress , userNameActual );
-    Thread.sleep(1000);
+    System.out.println(userNameActual);
+    LinkedList<String> mailid= new LinkedList<String>();
+     mailid.add("samkitjain@cdnsol.com");
+   Assert.assertEquals(mailid, userNameActual );
+ 
+  
+   Thread.sleep(3000);
   }
  
    @And("^user need to be on your logo SignIn page$")
@@ -78,7 +82,9 @@ WebDriver mydriver;
 	
 	String values3 = data.get(1).get(0);
 	String values4 = data.get(1).get(1);
-	 mydriver.findElement(By.id("customer_firstname")).sendKeys(values3);
+	 
+	 mydriver.findElement(By.xpath("//input[@id='customer_firstname']")).sendKeys(values3);
+	
 	 mydriver.findElement(By.id("customer_lastname")).sendKeys(values4);
  
  
