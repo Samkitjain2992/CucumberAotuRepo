@@ -49,7 +49,8 @@ public void  User_checks_Email_address_field(String userEmailAddress ) throws In
 
 @And("^user click on create account button and Create account page should be open there$")
 public void user_click_on_create_account_button () throws InterruptedException {
-	 Thread.sleep(5000);
+	 Thread.sleep(10000);
+	 Thread.sleep(10000);
 	 Thread.sleep(10000);
 	 mydriver.findElement(By.xpath("//*[@id=\"SubmitCreate\"]/span")).click();
 	String pageTitle = mydriver.findElement(By.className("page-subheading")).getText();
