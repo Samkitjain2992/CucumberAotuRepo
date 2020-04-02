@@ -51,10 +51,9 @@ public void  User_checks_Email_address_field(String userEmailAddress ) throws In
     LinkedList<String> mailid= new LinkedList<String>();
      mailid.add("samkitjain@cdnsol.com");
      mailid.add(userNameActual);
-     Assert.assertEquals(mailid , mailid );
- 
-  
-   Thread.sleep(3000);
+     Assert.assertEquals(mailid , mailid ); 
+     
+     Thread.sleep(3000);
   }
  
    @And("^user need to be on your logo SignIn page$")
