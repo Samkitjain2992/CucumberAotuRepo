@@ -75,7 +75,7 @@ WebDriver mydriver;
 	 
     }
     @When("^Enter following data$")
- public void Enter_followind_data(DataTable table)  {
+ public void Enter_followind_data(DataTable table) throws InterruptedException  {
 	List<List<String>> data = table.raw();
 	
 	String values1 = data.get(0).get(0);
@@ -83,7 +83,8 @@ WebDriver mydriver;
 	
 	String values3 = data.get(1).get(0);
 	String values4 = data.get(1).get(1);
-	 
+	Thread.sleep(10000);
+	Thread.sleep(10000);
 	 mydriver.findElement(By.xpath("//input[@id='customer_firstname']")).sendKeys(values3);
 	
 	 mydriver.findElement(By.id("customer_lastname")).sendKeys(values4);
